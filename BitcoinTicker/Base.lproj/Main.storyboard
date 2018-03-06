@@ -56,7 +56,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAp-Cr-XCq">
-                                        <rect key="frame" x="0.0" y="300" width="375" height="147"/>
+                                        <rect key="frame" x="0.0" y="300" width="375" height="146.5"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-f7-OLY">
                                                 <rect key="frame" x="92" y="59.5" width="191" height="29"/>

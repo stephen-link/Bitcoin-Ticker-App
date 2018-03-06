@@ -12,28 +12,30 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    
+    //Constants
     let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     let symbolArray = ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"]
     
+    //Variables
     var bitcoinJSON = JSON()
     var finalURL = ""
     var symbolString = ""
     var averageSelection = "day"
     
-
+    //Outlets
     @IBOutlet weak var bitcoinPriceLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var averagePicker: UISegmentedControl!
     
-    
+    //Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPicker.delegate = self
         currencyPicker.dataSource = self
     }
 
+    //Update averageSelection String to reflect what option the user has toggled
     @IBAction func averagePickerPressed(_ sender: UISegmentedControl) {
         switch averagePicker.selectedSegmentIndex {
         case 0:
@@ -49,13 +51,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
             
         }
+        //Update label accordingly
         updateBitcoinPrice(json: bitcoinJSON)
     }
     
     
     
 
-    
+    //PickerView functions
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -68,6 +71,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return currencyArray[row]
     }
     
+    //If a currency has been selected, update the API URL and get the data
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         finalURL = baseURL + currencyArray[row]
         symbolString = symbolArray[row]
@@ -82,6 +86,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 //    //MARK: - Networking
 //    /***************************************************************/
     
+    //Make the API call, if success send the data to be parsed and displayed, if error update label accordingly
     func getBitcoinPrice(url: String) {
         
         Alamofire.request(url, method: .get)
@@ -108,6 +113,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 //    //MARK: - JSON Parsing
 //    /***************************************************************/
     
+    
+    //Parse and display the bitcoin data
     func updateBitcoinPrice(json : JSON) {
         
         if let tempResult = json["averages"][averageSelection].double {
@@ -115,7 +122,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             self.bitcoinPriceLabel.text = "\(symbolString)\(tempResult)"
         
         } else {
+            
             self.bitcoinPriceLabel.text = "Price Unavailable"
+            
         }
         
         
