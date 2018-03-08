@@ -21,7 +21,11 @@ It is worth noting that while the base app was part of a guided lesson, I did bu
 
 ![Original App](http://i.giphy.com/l0HlQGzz2MQCKIBI4.gif)         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                             ![Imgur](https://i.imgur.com/3VtuAvo.png?1)
 
+## Run BitcoinTicker on your Machine
+**1.** Clone or download the repository.
 
+**2.** Navigate to the Bitcoin-Ticker-App directory in Terminal, and run `pod install` (If you don't have Cocoapods installed, follow the instructions posted [here](https://guides.cocoapods.org/using/getting-started.html)).
 
+**3.** Open the BitcoinTicker.xcworkspace file in Xcode, and run on the simulator.
 
-Copyright © The App Brewery
+**4.** That's it!
