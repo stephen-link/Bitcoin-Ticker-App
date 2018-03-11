@@ -8,13 +8,13 @@ It is worth noting that while the base app was part of a guided lesson, I did bu
 ## Skills Utilized
 -Swift Programming
 
--Basic UI Design including constraints
+-REST APIs / Networking
 
 -Parsing data in a JSON format
 
--Cocoapods (Alamofire, SwiftyJSON)
+-Basic UI Design including constraints
 
--Networking / API Calls
+-Cocoapods (Alamofire, SwiftyJSON)
 
 ## Finished App
 **Original:**  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **With my Updates:**
